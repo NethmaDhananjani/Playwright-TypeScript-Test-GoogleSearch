@@ -3,7 +3,7 @@ import { Page } from 'playwright';
 export class GoogleSearchResultsPage {
   constructor(private page: Page) {}
 
-   // Locators
+   // Elements
   public results = this.page.locator('h3'); 
   public searchbar = this.page.locator('//*[@id="APjFqb"]'); 
 
