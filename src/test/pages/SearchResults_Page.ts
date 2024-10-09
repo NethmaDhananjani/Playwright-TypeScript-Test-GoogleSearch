@@ -5,7 +5,7 @@ export class GoogleSearchResultsPage {
 
    // Locators
   public results = this.page.locator('h3'); 
-  public searchInput = this.page.locator('//*[@id="APjFqb"]'); 
+  public searchbar = this.page.locator('//*[@id="APjFqb"]'); 
 
   //Function to get the number of results displayed
   async getResultsCount(): Promise<number> {
@@ -15,6 +15,6 @@ export class GoogleSearchResultsPage {
 
   //Function to get the text inside the serach bar
   async getSearchTerm(): Promise<string> {
-    return await this.searchInput.inputValue(); 
+    return await this.searchbar.inputValue(); 
   }
 }

@@ -4,7 +4,7 @@ export class GoogleSearchPage {
   constructor(private page: Page) {}
 
   // Locators
-  public searchInput = this.page.locator('//*[@id="APjFqb"]'); 
+  public searchbar = this.page.locator('//*[@id="APjFqb"]'); 
 
   // Function to go to Google home page
   async navigate() {
@@ -13,7 +13,7 @@ export class GoogleSearchPage {
 
   // Function to search
   async performSearch(query: string) {
-    await this.searchInput.fill(query); 
-    await this.searchInput.press('Enter'); 
+    await this.searchbar.fill(query); 
+    await this.searchbar.press('Enter'); 
   }
 }
